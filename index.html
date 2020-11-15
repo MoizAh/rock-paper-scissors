@@ -1,4 +1,7 @@
 <script>
+    let playerWin = 1;
+    let computerWin = 1;
+
     function computerPlayer() {
         const randomNumber = (Math.floor(Math.random() * 3) + 1);
         var computerChoice = randomNumber;
@@ -10,28 +13,40 @@
             return computerChoice = "scissors"
         }
     }
+
     function singleRound(playerSelection, computerSelection) {
         computerSelection = computerPlayer();
         playerSelection = prompt("Please enter Rock, Paper, or Scissors").toLowerCase();
         if (playerSelection === computerSelection) {
-            return "It's a draw!"
+            console.log("It's a draw!")
         } else if (playerSelection === "rock" && computerSelection === "paper") {
-            return "You lose! Paper beats rock!"
+            console.log("You lose! Paper beats rock! Computer score is: " + computerWin++);
         }
         else if (playerSelection === "rock" && computerSelection === "scissors") {
-            return "You win! Rock beats paper!"
+            console.log("You win! Rock beats scissors! Your score is: " + playerWin++)
         }
         else if (playerSelection === "paper" && computerSelection === "rock") {
-            return "You win! Paper beats rock!"
+            console.log("You win! Paper beats rock! Your score is: " + playerWin++)
         }
         else if (playerSelection === "paper" && computerSelection === "scissors") {
-            return "You lose! Scissor beats paper!"
+            console.log("You lose! Scissor beats paper! Computer score is: " + computerWin++)
         }
         else if (playerSelection === "scissors" && computerSelection === "rock") {
-            return "You lose! Rock beats scissors!"
+            console.log("You lose! Rock beats scissors! Computer score is: " + computerWin++)
         }
         else if (playerSelection === "scissors" && computerSelection === "paper") {
-            return "You win! Scissors beats paper!"
+            console.log("You win! Scissors beats paper! Your score is: " + playerWin++)
+        }
+    }
+
+    function game() {
+        while (playerWin != 6) {
+            singleRound()
+            if (computerWin === 6) {
+                console.log("You lost the game!")
+            } else if (playerWin === 6) {
+                console.log("You won the game!")
+            }
         }
     }
 </script>
