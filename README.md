@@ -1,1 +1,1 @@
-This is the Rock Paper Scissor project from the Foundations path on The Odin Project.
+This is the Rock Paper Scissors project from the Foundations path on The Odin Project.
