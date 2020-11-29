@@ -1,0 +1,124 @@
+body {
+    background-color: #E5E5E5;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+    height: 100%;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 75px;
+    font-size: 3rem;
+}
+
+.progress-text {
+    align-content: center;
+    background-color: #FDC05D;
+    margin: 0 auto;
+    width: max-content;
+    border: 3px solid #FCA311;
+    padding: 10px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* RPS */
+
+.rps {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 100px 0 100px 0;
+}
+
+
+.rock {
+    height: 200px;
+    width: 200px;
+    opacity: 85%;
+    display: flex;
+    transition: 0.5s
+}
+
+.rock:hover {
+    transform: scale(1.1);
+}
+
+.paper {
+    height: 200px;
+    width: 200px;
+    opacity: 85%;
+    display: flex;
+    transition: 0.5s
+}
+
+.paper:hover {
+    transform: scale(1.1);
+}
+
+.scissors {
+    height: 200px;
+    width: 200px;
+    opacity: 85%;
+    display: flex;
+    transition: 0.5s
+}
+
+.scissors:hover {
+    transform: scale(1.1);
+}
+
+/* Scoreboard */
+
+.container-scoreboard {
+    margin: 75px 0 50px 0;   
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.score, .score {
+    border: 2.5px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    font-weight: bold;
+}
+
+.score-title {
+    border-bottom: 1px solid black;
+}
+
+.playerScore, .computerScore {
+    text-align: center;
+    padding: 5px 0 0 0;
+    font-size: 2rem;
+}
+
+.container-button {
+    text-align: center;
+}
+
+/* Reset Button */
+
+.reset {
+    background: none;
+	color: inherit;
+    border: 2.5px solid #14213D;
+    padding: 7.5px;
+    border-radius: 10px;
+	font: inherit;
+	cursor: pointer;
+    outline: inherit;
+    font-weight: bold;
+}
+
+.reset:hover {
+    background-color: #14213D;
+    color: white;
+    transition: .25s;
+}

@@ -1,52 +1,52 @@
-<script>
-    let playerWin = 1;
-    let computerWin = 1;
+<!DOCTYPE html>
+<html lang="en">
 
-    function computerPlayer() {
-        const randomNumber = (Math.floor(Math.random() * 3) + 1);
-        var computerChoice = randomNumber;
-        if (computerChoice % 3 === 0) {
-            return computerChoice = "rock"
-        } else if (computerChoice % 3 === 1) {
-            return computerChoice = "paper"
-        } else {
-            return computerChoice = "scissors"
-        }
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet"> 
 
-    function singleRound(playerSelection, computerSelection) {
-        computerSelection = computerPlayer();
-        playerSelection = prompt("Please enter Rock, Paper, or Scissors").toLowerCase();
-        if (playerSelection === computerSelection) {
-            console.log("It's a draw!")
-        } else if (playerSelection === "rock" && computerSelection === "paper") {
-            console.log("You lose! Paper beats rock! Computer score is: " + computerWin++);
-        }
-        else if (playerSelection === "rock" && computerSelection === "scissors") {
-            console.log("You win! Rock beats scissors! Your score is: " + playerWin++)
-        }
-        else if (playerSelection === "paper" && computerSelection === "rock") {
-            console.log("You win! Paper beats rock! Your score is: " + playerWin++)
-        }
-        else if (playerSelection === "paper" && computerSelection === "scissors") {
-            console.log("You lose! Scissor beats paper! Computer score is: " + computerWin++)
-        }
-        else if (playerSelection === "scissors" && computerSelection === "rock") {
-            console.log("You lose! Rock beats scissors! Computer score is: " + computerWin++)
-        }
-        else if (playerSelection === "scissors" && computerSelection === "paper") {
-            console.log("You win! Scissors beats paper! Your score is: " + playerWin++)
-        }
-    }
+    <title>Rock, Paper, Scissors</title>
+</head>
 
-    function game() {
-        while (playerWin != 6) {
-            singleRound()
-            if (computerWin === 6) {
-                console.log("You lost the game!")
-            } else if (playerWin === 6) {
-                console.log("You won the game!")
-            }
-        }
-    }
-</script>
+<body>
+    <div class="container">
+        <h1 class="title">Rock | Paper | Scissors</h1>
+        <div class="progress-text">Choose your weapon.</div>
+        <div class="rps">
+            <div class="rock">
+                <input class="choice" id="r" type="image" src="/images/hand-rock-regular.svg" alt="hand rock submit">
+            </div>
+            <div class="paper">
+                <input class="choice" id="p" type="image" src="/images/hand-paper-regular.svg" alt="hand paper submit">
+            </div>
+            <div class="scissors">
+                <input class="choice" id="s" type="image" src="/images/hand-scissors-regular.svg"
+                    alt="hand scissors submit">
+            </div>
+        </div>
+        <div class="container-scoreboard">
+            <div class="scoreboard">
+                <div class="score">
+                    <div class="score-title">Score</div>
+                    <div class="playerScore" data-value="0">
+                        0
+                    </div>
+                </div>
+                <div class="score">
+                    <div class="score-title">Score</div>
+                    <div class="computerScore" data-value="0">
+                        0
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-button">
+            <button class="reset">Reset</button>
+        </div>
+</body>
+<script type="text/javascript" src="game.js"></script>
+
+</html>
